@@ -51,7 +51,7 @@ IP= args[1]
 # OS detection Linux/Mac or Windows
 if platform.system() == 'Linux' or platform.system() == 'Darwin':
     #Start traceroute command
-    proc = subprocess.Popen(["traceroute -m 25 -n "+IP], stdout=subprocess.PIPE, shell=True,universal_newlines=True)
+    proc = subprocess.Popen(["traceroute -m 25 "+IP], stdout=subprocess.PIPE, shell=True,universal_newlines=True)
     #plot a pretty enough map
     fig = plt.figure(figsize=(10, 6), edgecolor='w')
     m = Basemap(projection='mill', lon_0=0,resolution='l')
